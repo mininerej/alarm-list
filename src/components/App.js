@@ -89,7 +89,7 @@ class App extends Component {
         addNewAlarm={this.addNewAlarm.bind(this)} 
         title={this.state.currentCategory} 
         alarmList={this.state.alarmList}>
-        <NewAlarm ref="newAlarm" addNewAlarm={this.props.addNewAlarm}/>   
+        <NewAlarm ref="newAlarm" addNewAlarm={this.addNewAlarm.bind(this)}/>   
         </Content>
       </div>
     );

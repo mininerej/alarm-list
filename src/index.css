@@ -111,7 +111,7 @@ input:focus {
   float: right;
 }
 .newAlarm {
-
+  display: none;
   padding: 10px;
   padding-left: 15px;
   padding-right: 0;
