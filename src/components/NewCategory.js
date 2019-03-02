@@ -6,7 +6,6 @@ class NewCategory extends Component {
     this.refs.newCategory.style.display = "block";
   }
   onKeyPressed(e){
-    console.log(e.key)
     if (e.key === "Enter" && e.target.value){
         this.props.addNewCategory(e.target.value);
         e.target.value = ""
@@ -23,7 +22,10 @@ class NewCategory extends Component {
   }
   render() {
     return (
-        <input ref="newCategory" onKeyDown={this.onKeyPressed.bind(this)} onBlur={this.onFocusOut.bind(this)} className="new-category"/>
+        <input ref="newCategory" 
+        onKeyDown={this.onKeyPressed.bind(this)} 
+        onBlur={this.onFocusOut.bind(this)} 
+        className="new-category"/>
     );
   }
 }
