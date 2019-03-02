@@ -30,6 +30,7 @@ input:focus {
 }
 .search{
   font-size: 17pt;
+  width: 95%;
   border-radius: 5px;
   border: 4px red double;
   background-color: transparent;

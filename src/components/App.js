@@ -17,6 +17,30 @@ class App extends Component {
       searchList: []
     }
   }
+  addNewAlarm(title) {
+    const newAlarm = {
+      category: this.state.currentCategory,
+      title: title,
+      done: false,
+      memo: ""
+    }
+    this.setState({
+      alarmList: [...this.state.alarmList, newAlarm]
+    })
+  }
+  addNewCategory(category) {
+    this.setState({
+      categoryList: [...this.state.categoryList, category],
+      currentCategory: category
+    })
+  }
+  fixAlarmTitle(before, after) {
+    for (var alarm of this.state.alarmList) {
+      if (alarm.title === before) {
+        alarm.title = after;
+      }
+    }
+  }
   search(query) {
     if (query === "") {
       this.setState({
@@ -33,6 +57,11 @@ class App extends Component {
       this.refs.addCategory.hide();
     }
 
+  }
+  setCurrentCategory(category) {
+    this.setState({
+      currentCategory: category
+    })
   }
   showNewCategoryInput() {
     this.refs.newCategory.showNewCategoryInput();
@@ -57,17 +86,6 @@ class App extends Component {
       }
     }
   }
-  setCurrentCategory(category) {
-    this.setState({
-      currentCategory: category
-    })
-  }
-  addNewCategory(category) {
-    this.setState({
-      categoryList: [...this.state.categoryList, category],
-      currentCategory: category
-    })
-  }
   removeAlarm(title) {
     for (var i = 0; i < this.state.alarmList.length; i++) {
       if (this.state.alarmList[i].title === title) {
@@ -79,24 +97,7 @@ class App extends Component {
       }
     }
   }
-  fixAlarmTitle(before, after) {
-    for (var alarm of this.state.alarmList) {
-      if (alarm.title === before) {
-        alarm.title = after;
-      }
-    }
-  }
-  addNewAlarm(title) {
-    const newAlarm = {
-      category: this.state.currentCategory,
-      title: title,
-      done: false,
-      memo: ""
-    }
-    this.setState({
-      alarmList: [...this.state.alarmList, newAlarm]
-    })
-  }
+
   render() {
     return (
       <div className="App">
@@ -117,7 +118,7 @@ class App extends Component {
           <AddCategory
             ref="addCategory"
             className="add-category"
-            showNewCategoryInput={this.props.showNewCategoryInput}>Add Category</AddCategory>
+            showNewCategoryInput={this.showNewCategoryInput.bind(this)}>Add Category</AddCategory>
         </Nav>
         <Content
           toggleDone={this.toggleDone.bind(this)}
