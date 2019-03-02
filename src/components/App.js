@@ -85,7 +85,7 @@ class App extends Component {
         setCurrentCategory={this.setCurrentCategory.bind(this)}
         categories={this.state.categoryList}
         showNewCategoryInput={this.showNewCategoryInput.bind(this)}>
-      <NewCategory ref="newCategory" addNewCategory={this.props.addNewCategory} />
+      <NewCategory ref="newCategory" addNewCategory={this.addNewCategory.bind(this)} />
         </Nav>
       <Content 
       toggleDone={this.toggleDone.bind(this)}

@@ -48,6 +48,9 @@ input:focus {
   font-size: 17pt;
   margin: 0;
 }
+.new-category{
+  display: none;
+}
 .alarm-title{
   border: none;
 }
