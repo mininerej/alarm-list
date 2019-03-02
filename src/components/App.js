@@ -3,6 +3,7 @@ import Nav from './Nav';
 import Content from './Content';
 import { fakeList, categories } from '../dummy'
 import NewAlarm from './NewAlarm'
+import NewCategory from './NewCategory'
 
 class App extends Component {
   constructor(props) {
@@ -12,6 +13,9 @@ class App extends Component {
       categoryList: categories,
       currentCategory: categories[0]
     }
+  }
+  showNewCategoryInput(){
+    this.refs.newCategory.showNewCategoryInput();
   }
   showNewAlarmInput() {
     this.refs.newAlarm.showNewAlarmInput();
@@ -79,7 +83,10 @@ class App extends Component {
       <Nav 
         addNewCategory={this.addNewCategory.bind(this)}
         setCurrentCategory={this.setCurrentCategory.bind(this)}
-        categories={this.state.categoryList}></Nav>
+        categories={this.state.categoryList}
+        showNewCategoryInput={this.showNewCategoryInput.bind(this)}>
+      <NewCategory ref="newCategory" addNewCategory={this.props.addNewCategory} />
+        </Nav>
       <Content 
       toggleDone={this.toggleDone.bind(this)}
       showNewAlarmInput={this.showNewAlarmInput.bind(this)}
