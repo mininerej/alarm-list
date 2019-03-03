@@ -17,7 +17,7 @@ input:focus {
   width: 350px;
   background-color: #EED271;
   padding: 40px 40px;
-  height: 100%;
+  height: -webkit-fill-available;
   display: inline-block;
   position: absolute;
   box-shadow: 3px 0px 8px grey;
@@ -39,6 +39,8 @@ input:focus {
 
 .category-list{
   padding: 40px 0px;
+  height: 700px;
+  overflow-y: scroll;
 }
 .category, .new-category{
   display: block;
@@ -58,16 +60,21 @@ input:focus {
 }
 .alarm-list{
 
-  padding: 40px 0px;
+  padding: 40px 20px;
+  height: 780px;
+  overflow-y: scroll;
+}
+::-webkit-scrollbar { 
+  display: none; 
 }
 .add-category{
-  width: 100%;
-  bottom: 0;
-  right: 40px;
+  width: 82%;
   padding: 15px;
+  bottom: 30px;
   font-size: 15pt;
   border-radius: 5px;
   border: 4px black double;
+  position: absolute;
   background-color: transparent;
 }
 .add-category:focus{

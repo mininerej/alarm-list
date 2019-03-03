@@ -4,6 +4,7 @@ class NewCategory extends Component {
 
   showNewCategoryInput(){
     this.refs.newCategory.style.display = "block";
+    this.refs.newCategory.focus();
   }
   onKeyPressed(e){
     if (e.key === "Enter" && e.target.value){

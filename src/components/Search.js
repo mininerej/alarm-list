@@ -15,7 +15,10 @@ class Search extends Component {
   }
   render() {
     return (
-      <input className="search" onKeyDown={this.onKeyPressed.bind(this)} hint="Search"></input>
+      <input 
+      className="search" 
+      onKeyDown={this.onKeyPressed.bind(this)} 
+      placeholder="Search"></input>
     );
   }
 }

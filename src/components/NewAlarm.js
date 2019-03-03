@@ -4,6 +4,7 @@ class NewAlarm extends Component {
   showNewAlarmInput(){
     this.refs.newAlarm.value = '';
     this.refs.newAlarm.style.display = 'block';
+    this.refs.newAlarm.focus();
   }
   onKeyPressed(e){
     if (e.key === "Enter" && e.target.value){
