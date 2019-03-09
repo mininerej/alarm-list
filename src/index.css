@@ -27,6 +27,7 @@ input:focus {
   margin: auto;
   display: block;
   height: 100%;
+  min-width: 550px;
 }
 .search{
   font-size: 17pt;
@@ -80,20 +81,21 @@ input:focus {
 .add-category:focus{
   outline: none;
 }
-.content > span {
+.title {
   font-size: 25pt;
   padding: 15px;
   font-weight: bold;
   display: inline-block;
 }
 .add-alarm{
-  position: absolute;
-  right: 40px;
+  position: static;
+  float: right;
   padding: 15px;
   font-size: 15pt;
   border-radius: 5px;
   border: 4px black double;
   background-color: transparent;
+
 
 }
 .add-alarm:focus{

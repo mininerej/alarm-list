@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import Nav from './Nav';
-import Content from './Content';
+import Nav from './Category/Nav';
+import Content from './Alarm/Content';
 import { fakeList, categories } from '../dummy'
-import NewAlarm from './NewAlarm'
-import NewCategory from './NewCategory'
-import CategoryList from './CategoryList';
-import AddCategory from './AddCategory';
+import NewAlarm from './Alarm/NewAlarm'
+import NewCategory from './Category/NewCategory'
+import CategoryList from './Category/CategoryList';
+import AddCategory from './Alarm/AddCategory';
 
 class App extends Component {
   constructor(props) {
