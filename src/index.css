@@ -82,8 +82,8 @@ input:focus {
   outline: none;
 }
 .title {
-  font-size: 25pt;
-  padding: 15px;
+  font-size: 40pt;
+  padding-left: 15px;
   font-weight: bold;
   display: inline-block;
 }
