@@ -5,7 +5,7 @@ import { fakeList, categories } from '../dummy'
 import NewAlarm from './Alarm/NewAlarm'
 import NewCategory from './Category/NewCategory'
 import CategoryList from './Category/CategoryList';
-import AddCategory from './Alarm/AddCategory';
+import AddCategory from './Category/AddCategory';
 
 class App extends Component {
   constructor(props) {
